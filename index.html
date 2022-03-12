@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal JS</title>
+    <style>
+    #myModal {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 900;
+        background-color: #6e6e6e7e;
+    }
+
+    #modalCont {
+        border: 3px solid white;
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 901;
+    }
+
+    #modalCont img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .btnModalClose {
+        width: 35px;
+        height: 35px;
+        background-color: #ccc;
+        border-radius: 10px;
+        cursor: pointer;
+        position: absolute;
+        top: -100;
+        right: 0;
+        z-index: 901;
+    }
+
+    .btnModalClose:hover {
+        background-color: #D54040;
+        border: 2px solid #ccc;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="imagens/imagem.jpg" alt="" onclick="openModal(this)" width="750px">
+    </div>
+
+    <div id="myModal" class="" onclick="closeModal()">
+        <div id="modalCont">
+            <img id="img1" src="" alt="">
+            <button class="btnModalClose" onclick="closeModal()"><strong>X</strong></button>
+        </div>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>
